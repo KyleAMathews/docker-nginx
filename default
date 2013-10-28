@@ -1,0 +1,13 @@
+server {
+	root /var/www;
+	index index.html index.htm;
+
+	# Make site accessible from http://localhost/
+	server_name localhost;
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to index.html
+		try_files $uri $uri/ /index.html;
+	}
+}
