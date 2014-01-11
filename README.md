@@ -7,7 +7,7 @@ You'll need to use a `Dockerfile` to build an image with your site in it. For ex
 
     FROM orchardup/nginx
     ADD src/ /var/www
-    CMD ['nginx']
+    CMD 'nginx'
 
 Then build and run it:
 
