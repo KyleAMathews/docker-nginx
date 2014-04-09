@@ -13,6 +13,10 @@ server {
 	gzip_proxied any;
 	gzip_types text/plain text/css application/x-javascript text/xml application/xml application/xml+rss text/javascript image/x-icon image/bmp;
 	gzip_buffers 16 8k;
+	
+	location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+                expires 1d;
+        }
 
 	location / {
 		# First attempt to serve request as file, then
