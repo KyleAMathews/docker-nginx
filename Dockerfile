@@ -1,8 +1,13 @@
-FROM stackbrew/ubuntu:12.04
+FROM dockerfile/ubuntu
 MAINTAINER Kyle Mathews "mathews.kyle@gmail.com"
-RUN apt-get update -qq && apt-get -y install nginx
 
-RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+# Install Nginx.
+RUN apt-get install -y software-properties-common
+RUN add-apt-repository -y ppa:nginx/stable
+RUN apt-get update
+RUN apt-get install -y nginx
+RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
+
 RUN mkdir /etc/nginx/ssl
 ADD default /etc/nginx/sites-available/default
 ADD default-ssl /etc/nginx/sites-available/default-ssl
