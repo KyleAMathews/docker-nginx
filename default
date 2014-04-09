@@ -8,6 +8,13 @@ server {
 	# UTF-8 all the things
 	charset utf-8;
 	
+	sendfile on;
+	tcp_nopush on;
+  	tcp_nodelay on;
+  	
+  	# Timeout for keep-alive connections. Server will close connections after this time.
+	keepalive_timeout 30;
+	
 	# Enable GZIP
 	gzip on;
 	gzip_comp_level 6;
