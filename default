@@ -14,6 +14,7 @@ server {
 	gzip_types text/plain text/css application/x-javascript text/xml application/xml application/xml+rss text/javascript image/x-icon image/bmp;
 	gzip_buffers 16 8k;
 	
+	# Add 1 day expires header for static assets
 	location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
                 expires 1d;
         }
