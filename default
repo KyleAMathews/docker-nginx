@@ -4,6 +4,15 @@ server {
 
 	# Make site accessible from http://localhost/
 	server_name localhost;
+	
+	# Enable GZIP
+	gzip on;
+	gzip_comp_level 6;
+	gzip_vary on;
+	gzip_min_length  1000;
+	gzip_proxied any;
+	gzip_types text/plain text/css application/x-javascript text/xml application/xml application/xml+rss text/javascript image/x-icon image/bmp;
+	gzip_buffers 16 8k;
 
 	location / {
 		# First attempt to serve request as file, then
