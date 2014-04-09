@@ -5,6 +5,9 @@ server {
 	# Make site accessible from http://localhost/
 	server_name localhost;
 	
+	# UTF-8 all the things
+	charset utf-8;
+	
 	# Enable GZIP
 	gzip on;
 	gzip_comp_level 6;
