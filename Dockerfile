@@ -1,5 +1,5 @@
 FROM stackbrew/ubuntu:12.04
-MAINTAINER Ben Firshman "ben@orchardup.com"
+MAINTAINER Kyle Mathews "mathews.kyle@gmail.com"
 RUN apt-get update -qq && apt-get -y install nginx
 
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
