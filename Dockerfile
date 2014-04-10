@@ -7,6 +7,7 @@ RUN add-apt-repository -y ppa:nginx/stable
 RUN apt-get update
 RUN apt-get install -y nginx
 RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
+RUN sed -i 's/user www-data/user root/g' /etc/nginx/nginx.conf
 
 RUN mkdir /etc/nginx/ssl
 ADD default /etc/nginx/sites-available/default
