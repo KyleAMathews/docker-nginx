@@ -5,7 +5,7 @@ A simple Nginx image for Docker to serve static websites. It will serve anything
 
 You'll need to use a `Dockerfile` to build an image with your site in it. For example, if your site is in a directory called `src/`, you could create this `Dockerfile`:
 
-    FROM orchardup/nginx
+    FROM kyma/nginx
     ADD src/ /var/www
     CMD 'nginx'
 
