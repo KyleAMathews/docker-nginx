@@ -5,7 +5,7 @@ MAINTAINER Kyle Mathews "mathews.kyle@gmail.com"
 # Install Nginx.
 ADD nginx_signing.key /tmp/nginx_signing.key
 RUN apt-key add /tmp/nginx_signing.key
-RUN echo "deb http://nginx.org/packages/ubuntu/ quantal nginx\n deb-src http://nginx.org/packages/ubuntu/ quantal nginx" | tee /etc/apt/sources.list.d/nginx.list
+RUN echo "deb http://nginx.org/packages/ubuntu/ $(lsb_release -cs) nginx\n deb-src http://nginx.org/packages/ubuntu/ $(lsb_release -cs) nginx" | tee /etc/apt/sources.list.d/nginx.list
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y nginx=1.6.0-1~quantal
 
