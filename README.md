@@ -28,4 +28,9 @@ To use SSL, put your certs in `/etc/nginx/ssl` and enable the `default-ssl` site
     ADD server.key /etc/nginx/ssl/
     RUN ln -s /etc/nginx/sites-available/default-ssl /etc/nginx/sites-enabled/default-ssl
 
+nginx.conf
+---------
 
+The nginx.conf and mime.types are pulled with slight modifications from
+the h5bp Nginx HTTP server boilerplate configs project at
+https://github.com/h5bp/server-configs-nginx
