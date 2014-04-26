@@ -1,4 +1,4 @@
-# version 12.10
+# version 14.04
 FROM dockerfile/ubuntu
 MAINTAINER Kyle Mathews "mathews.kyle@gmail.com"
 
