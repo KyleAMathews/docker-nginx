@@ -1,9 +1,9 @@
 docker-nginx
 ============
 
-A simple Nginx image for Docker to serve static websites. It will serve anything in the directory `/var/www`.
+A simple Nginx image for Docker to serve static websites. It will serve anything in the `/var/www` directory.
 
-You'll need to use a `Dockerfile` to build an image with your site in it. For example, if your site is in a directory called `src/`, you could create this `Dockerfile`:
+To build a Docker image for your site, you'll need to create a `Dockerfile`. For example, if your site is in a directory called `src/`, you could create this `Dockerfile`:
 
     FROM kyma/nginx
     ADD src/ /var/www
