@@ -21,7 +21,7 @@ Then build and run it:
 
 Docker Hub
 ----------
-The build information can be found in the Docker Hub at https://registry.hub.docker.com/u/kyma/docker-nginx/.
+The trusted build information can be found in the Docker Hub at https://registry.hub.docker.com/u/kyma/docker-nginx/.
 
 SSL
 ---
