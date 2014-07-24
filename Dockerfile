@@ -16,7 +16,8 @@ RUN mkdir /etc/nginx/ssl
 ADD default /etc/nginx/sites-enabled/default
 ADD default-ssl /etc/nginx/sites-available/default-ssl
 
-EXPOSE 80
+# expose both the HTTP (80) and HTTPS (443) ports
+EXPOSE 80 443
 
 CMD ["nginx"]
 

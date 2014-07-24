@@ -32,6 +32,11 @@ To use SSL, put your certs in `/etc/nginx/ssl` and enable the `default-ssl` site
     ADD server.key /etc/nginx/ssl/
     RUN ln -s /etc/nginx/sites-available/default-ssl /etc/nginx/sites-enabled/default-ssl
 
+When you run it, you'll want to make port 443 available, e.g.:
+
+    $ docker run -p 80:80 -p 443:443 -d mysite
+
+
 nginx.conf
 ---------
 
