@@ -7,7 +7,7 @@ ADD nginx_signing.key /tmp/nginx_signing.key
 RUN apt-key add /tmp/nginx_signing.key
 RUN echo "deb http://nginx.org/packages/ubuntu/ $(lsb_release -cs) nginx\n deb-src http://nginx.org/packages/ubuntu/ $(lsb_release -cs) nginx" | tee /etc/apt/sources.list.d/nginx.list
 RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y nginx=1.6.0-1~$(lsb_release -cs)
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y nginx=1.6.1-1~$(lsb_release -cs)
 
 RUN rm /etc/nginx/nginx.conf /etc/nginx/mime.types
 ADD nginx.conf /etc/nginx/nginx.conf
