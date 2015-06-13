@@ -6,7 +6,7 @@ A high-performance Nginx base image for Docker to serve static websites. It will
 To build a Docker image for your site, you'll need to create a `Dockerfile`. For example, if your site is in a directory called `src/`, you could create this `Dockerfile`:
 
     FROM kyma/docker-nginx
-    ADD src/ /var/www
+    COPY src/ /var/www
     CMD 'nginx'
 
 Then build and run it:
