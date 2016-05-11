@@ -47,9 +47,8 @@ https://github.com/h5bp/server-configs-nginx
 Customized configs
 ------------------
 
-You would build a dockerfile in your own project
-
-then you just copy in your modified file that matches your settings it could be as follows
+To modify the NGINX config, you would just create a custom Dockerfile like the following
+where you copy in your modified config files.
 
 ```dockerfile
 # Guide here:
@@ -61,8 +60,11 @@ then you just copy in your modified file that matches your settings it could be 
 # Build from this repo's image
 FROM kyma/docker-nginx
 
-# Example if you wanna swap the default server file
+# Example if you wanna swap the default server file.
 COPY path/to/your/default /etc/nginx/sites-enabled/default
+
+# Add src.
+COPY src/ /var/www
 
 CMD 'nginx'
 ```
