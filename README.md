@@ -43,3 +43,26 @@ nginx.conf
 The nginx.conf and mime.types are pulled with slight modifications from
 the h5bp Nginx HTTP server boilerplate configs project at
 https://github.com/h5bp/server-configs-nginx
+
+Customized configs
+------------------
+
+You would build a dockerfile in your own project
+
+then you just copy in your modified file that matches your settings it could be as follows
+
+```dockerfile
+# Guide here:
+# https://github.com/KyleAMathews/docker-nginx
+
+# Build docker file
+# docker build -t CONTAINERNAME .
+
+# Build from this repo's image
+FROM kyma/docker-nginx
+
+# Example if you wanna swap the default server file
+COPY path/to/your/default /etc/nginx/sites-enabled/default
+
+CMD 'nginx'
+```
