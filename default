@@ -21,4 +21,5 @@ server {
         rewrite .* / redirect;
     }
 
+    include /etc/nginx/basic.conf;
 }
