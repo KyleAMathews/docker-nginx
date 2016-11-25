@@ -5,9 +5,9 @@ server {
     # Make site accessible from http://localhost/
     server_name localhost;
 
-    # Add 1 day expires header for static assets
+    # Add 1 week expires header for static assets
     location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
-        expires 1d;
+        expires 1w;
     }
 
     location / {
