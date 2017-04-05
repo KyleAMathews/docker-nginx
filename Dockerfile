@@ -1,4 +1,4 @@
-FROM nginx:1.9
+FROM nginx:alpine
 MAINTAINER Kyle Mathews "mathews.kyle@gmail.com"
 
 RUN rm /etc/nginx/nginx.conf /etc/nginx/mime.types
