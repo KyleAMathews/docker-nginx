@@ -13,5 +13,5 @@ COPY location /etc/nginx/location
 EXPOSE 80 443
 
 CMD ["nginx"]
-cmd nilanjana
+cmd nilanjanam
 
